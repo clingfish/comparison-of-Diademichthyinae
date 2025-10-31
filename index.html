@@ -78,60 +78,60 @@
 <script>
 // ===== 魚データ（Excel 2～18行目より） =====
 const fishList = [
-  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながらない","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
+  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながらない","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
 
   
-  {"name":"未記載属 B","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"未記載属 B","img": "images/mikisaizoku_B.png","imgDisc": "images/mikisaizoku_B_disc.jpg","item1":"複型　吸盤中央部の乳頭状突起が著しく少なく、その数は1～2","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
   {"name":"未記載属 C","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"不明"},
 
   
-  {"name":"ウバウオ属","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
+  {"name":"ウバウオ属","img": "images/Aspasma.png","imgDisc": "images/Aspasma_ubauo_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
 
   
-  {"name":"ツルウバウオ属","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
+  {"name":"ツルウバウオ属","img": "images/Aspasmichthys.png","imgDisc": "images/Aspasmichthys_disc.jpg","item1":"複型","item2":"左右で分かれる（突起がない部分はひじょうに幅狭いスリット状）","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
 
   
-  {"name":"ヒメウバウオ属","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながらない","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
+  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"あり","item5":"3","item6":"膜でつながらない","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
 
   
-  {"name":"ホソウバウオ属","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","item7":"非常に幅狭い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ホソウバウオ属","img": "images/Pherallodus.png","imgDisc": "images/Pherallodus_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","item7":"非常に幅狭い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
-  {"name":"メシマウバウオ属","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
+  {"name":"メシマウバウオ属","img": "images/Liobranchia.png","imgDisc": "images/Liobranchia_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　膨出部に歯がある"},
 
   
-  {"name":"Erdmannichthys","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","item7":"非常に幅狭い楕円形","item8":"-","item9":"-","item10":"不明"},
+  {"name":"Erdmannichthys","img": "images/Erdmannichthys.png","imgDisc": "images/Erdmannichthys_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","item7":"非常に幅狭い楕円形","item8":"-","item9":"-","item10":"不明"},
 
   
-  {"name":"Flexor","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながらない","item7":"非常に幅狭い楕円形～卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"Flexor","img": "images/Flexor.png","imgDisc": "images/Flexor_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながらない","item7":"非常に幅狭い楕円形～卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
-  {"name":"未記載属 D","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"未記載属 D","img": "images/mikisaizoku_D.png","imgDisc": "images/Mikisaizoku_D_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
-  {"name":"アマツミウバウオ属","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"アマツミウバウオ属","img": "images/Lepadicyathus.png","imgDisc": "images/Lepadicyathus_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","imgLip": "images/Lepadicyathus_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
-  {"name":"ウミシダウバウオ属","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"棒～棍棒状　歯がない"},
+  {"name":"ウミシダウバウオ属","img": "images/Discotrema.png","imgDisc": "images/Discotrema_disc.jpg","item1":"単型　中央部に大きな空隙がある　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Discotrema_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"棒～棍棒状　歯がない"},
 
   
-  {"name":"タスジウミシダウバウオ属","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　歯がない"},
+  {"name":"タスジウミシダウバウオ属","img": "images/Rhinolepadichthys.png","imgDisc": "images/Rhinolepadichthys_disc.jpg","item1":"単型　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Rhinolepadichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"ほとんどない","item8":"-","item9":"-","item10":"被針状　歯がない"},
 
   
-  {"name":"ハシナガウバウオ属","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"2","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ハシナガウバウオ属","img": "images/Diademichthys.png","imgDisc": "images/Diademichthys_disc.jpg","item1":"単型　吸盤サイズがひじょうに小さい","item2":"中央で連続する","imgLip": "images/Diademichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"2","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
 
   
-  {"name":"ミサキウバウオ属","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"非常に大きく、三角形に近い","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ミサキウバウオ属","img": "images/Lepadichthys.png","imgDisc": "images/Lepadichthys_disc.jpg","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","item7":"非常に大きく、三角形に近い","item8":"-","item9":"-","item10":"棒～棍棒状　全体的に歯がある"},
   
 
-  {"name":"Flabellicauda","item1":"単型","item2":"中央部に突起がなく、左右で分かれる　または　中央で連続する","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　歯がない"}
+  {"name":"Flabellicauda","img": "images/Flabellicauda.png","imgDisc": "images/Flabellicauda_disc.jpg","item1":"単型　吸盤サイズがひじょうに小さい","item2":"中央部に突起がなく、左右で分かれる　または　中央で連続する","imgLip": "images/Flabellicauda_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"棒～棍棒状　歯がない"}
 ];
 
 const compareItems = [
   {"label":"吸盤タイプ","key":"item1"},
-  {"label":"吸盤A域上の乳頭状突起","key":"item2"},
+  {"label":"吸盤前縁部の乳頭状突起","key":"item2"},
   {"label":"上唇","key":"item3"},
   {"label":"下唇前方部の葉状突出部","key":"item4"},
   {"label":"前鰓蓋感覚孔数","key":"item5"},
@@ -220,22 +220,51 @@ function updateTable() {
     }
   });
 
+   // ---- 本体テーブル更新 ----
   const tbody = document.getElementById("compare-body");
   tbody.innerHTML = "";
 
   compareItems.forEach(item => {
-    const tr = document.createElement("tr");
-    const th = document.createElement("td");
-    th.textContent = item.label;
-    tr.appendChild(th);
+  const tr = document.createElement("tr");
+  const th = document.createElement("td");
+  th.textContent = item.label;
+  tr.appendChild(th);
 
-    selected.forEach(fish => {
-      const td = document.createElement("td");
-      td.textContent = fish ? (fish[item.key] || "-") : "-";
-      tr.appendChild(td);
-    });
-    tbody.appendChild(tr);
+  selected.forEach(fish => {
+    const td = document.createElement("td");
+
+    if (fish) {
+      // ===== 吸盤タイプ（item1）行 =====
+      if (item.key === "item1" && fish.imgDisc) {
+        td.innerHTML = `
+          <img src="${fish.imgDisc}" 
+               alt="${fish.name} 吸盤" 
+               style="width:200px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+      
+      // ===== 上唇（item3）行 =====
+      } else if (item.key === "item3" && fish.imgLip) {
+        td.innerHTML = `
+          <img src="${fish.imgLip}" 
+               alt="${fish.name} 上唇" 
+               style="width:200px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+      
+      // ===== 通常テキスト行 =====
+      } else {
+        td.textContent = fish[item.key] || "-";
+      }
+    } else {
+      td.textContent = "-";
+    }
+
+    tr.appendChild(td);
   });
+
+  tbody.appendChild(tr);
+});
 }
 
 initSelects();
