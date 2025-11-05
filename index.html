@@ -78,55 +78,55 @@
 <script>
 // ===== 魚データ（Excel 2～18行目より） =====
 const fishList = [
-  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/mikisaizoku_A_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_A_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/mikisaizoku_A_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_A_dentary_teeth.jpg","item9":"四角形の門歯状歯+フック状の先端","item10":"被針状　膨出部に歯がある"},
+  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/mikisaizoku_A_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_A_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/mikisaizoku_A_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_A_dentary_teeth.jpg","item9":"四角形の門歯状歯+フック状の先端","imgGill_arch": "images/mikisaizoku_A_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
-  {"name":"未記載属 B","img": "images/mikisaizoku_B.png","imgDisc": "images/mikisaizoku_B_disc.jpg","item1":"複型　吸盤中央部の乳頭状突起が著しく少なく、その数は1～2","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_B_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_B_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_B_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"未記載属 B","img": "images/mikisaizoku_B.png","imgDisc": "images/mikisaizoku_B_disc.jpg","item1":"複型　吸盤中央部の乳頭状突起が著しく少なく、その数は1～2","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_B_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_B_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_B_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/mikisaizoku_B_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
 
   
-  {"name":"未記載属 C","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_C_premaxillae.jpg","item7":"卵型に近い楕円形","item8":"-","item9":"-","item10":"不明"},
+  {"name":"未記載属 C","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_C_premaxillae.jpg","item7":"卵型に近い楕円形","item8":"-","item9":"-","imgGill_arch": "images/mikisaizoku_C_gill arch.jpg","item10":"基舌骨は長い"},
 
   
-  {"name":"ウバウオ属","img": "images/Aspasma.png","imgDisc": "images/Aspasma_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Aspasma_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasma_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Aspasma_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Aspasma_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","item10":"被針状　膨出部に歯がある"},
+  {"name":"ウバウオ属","img": "images/Aspasma.png","imgDisc": "images/Aspasma_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Aspasma_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasma_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Aspasma_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Aspasma_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Aspasma_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
-  {"name":"ツルウバウオ属","img": "images/Aspasmichthys.png","imgDisc": "images/Aspasmichthys_disc.jpg","item1":"複型","item2":"左右で分かれる（突起がない部分はひじょうに幅狭いスリット状）","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasmichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Aspasmichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Aspasmichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","item10":"被針状　膨出部に歯がある"},
+  {"name":"ツルウバウオ属","img": "images/Aspasmichthys.png","imgDisc": "images/Aspasmichthys_disc.jpg","item1":"複型","item2":"左右で分かれる（突起がない部分はひじょうに幅狭いスリット状）","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasmichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Aspasmichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Aspasmichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","imgGill_arch": "images/Aspasmichthys_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
-  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Propherallodus_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Propherallodus_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Propherallodus_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Propherallodus_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","item10":"被針状　膨出部に歯がある"},
+  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Propherallodus_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Propherallodus_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Propherallodus_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Propherallodus_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Propherallodus_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
-  {"name":"ホソウバウオ属","img": "images/Pherallodus.png","imgDisc": "images/Pherallodus_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","imgPremaxillae": "images/Pherallodus_premaxillae.jpg","item7":"非常に幅狭い楕円形","imgPremaxillae_teeth": "images/Pherallodus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Pherallodus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ホソウバウオ属","img": "images/Pherallodus.png","imgDisc": "images/Pherallodus_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","imgPremaxillae": "images/Pherallodus_premaxillae.jpg","item7":"非常に幅狭い楕円形","imgPremaxillae_teeth": "images/Pherallodus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Pherallodus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/Pherallodus_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
 
   
-  {"name":"メシマウバウオ属","img": "images/Liobranchia.png","imgDisc": "images/Liobranchia_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Liobranchia_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Liobranchia_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Liobranchia_dentary_teeth.jpg","item9":"先端が丸い門歯状歯","item10":"被針状　膨出部に歯がある"},
+  {"name":"メシマウバウオ属","img": "images/Liobranchia.png","imgDisc": "images/Liobranchia_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Liobranchia_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Liobranchia_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Liobranchia_dentary_teeth.jpg","item9":"先端が丸い門歯状歯","imgGill_arch": "images/Liobranchia_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある　鰓耙は非常に小さい"},
 
   
-  {"name":"Erdmannichthys","img": "images/Erdmannichthys.png","imgDisc": "images/Erdmannichthys_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/Erdmannichthys_premaxillae.jpg","item7":"非常に幅狭い楕円形","item8":"楕円形の門歯状歯+フック状の先端","item9":"先端が後方に曲がる円錐歯","item10":"不明"},
+  {"name":"Erdmannichthys","img": "images/Erdmannichthys.png","imgDisc": "images/Erdmannichthys_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/Erdmannichthys_premaxillae.jpg","item7":"非常に幅狭い楕円形","item8":"楕円形の門歯状歯+フック状の先端","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Erdmannichthys_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）"},
 
   
-  {"name":"Flexor","img": "images/Flexor.png","imgDisc": "images/Flexor_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Flexor_premaxillae.jpg","item7":"非常に幅狭い楕円形～卵型に近い楕円形","imgPremaxillae_teeth": "images/Flexor_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/Flexor_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"Flexor","img": "images/Flexor.png","imgDisc": "images/Flexor_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Flexor_premaxillae.jpg","item7":"非常に幅狭い楕円形～卵型に近い楕円形","imgPremaxillae_teeth": "images/Flexor_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/Flexor_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Flexor_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
 
   
-  {"name":"未記載属 D","img": "images/mikisaizoku_D.png","imgDisc": "images/mikisaizoku_D_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_D_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_D_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/mikisaizoku_D_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端　歯は歯骨の前方部のみに限られる","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"未記載属 D","img": "images/mikisaizoku_D.png","imgDisc": "images/mikisaizoku_D_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_D_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_D_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/mikisaizoku_D_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端　歯は歯骨の前方部のみに限られる","imgGill_arch": "images/mikisaizoku_D_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
 
   
-  {"name":"アマツミウバウオ属","img": "images/Lepadicyathus.png","imgDisc": "images/Lepadicyathus_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","imgLip": "images/Lepadicyathus_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Lepadicyathus_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Lepadicyathus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Lepadicyathus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯　歯は歯骨の前方部のみに限られる","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"アマツミウバウオ属","img": "images/Lepadicyathus.png","imgDisc": "images/Lepadicyathus_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","imgLip": "images/Lepadicyathus_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Lepadicyathus_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Lepadicyathus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Lepadicyathus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯　歯は歯骨の前方部のみに限られる","imgGill_arch": "images/Lepadicyathus_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある　基鰓骨がない"},
 
   
-  {"name":"ウミシダウバウオ属","img": "images/Discotrema.png","imgDisc": "images/Discotrema_disc.jpg","item1":"単型　中央部に大きな空隙がある　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Discotrema_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Discotrema_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Discotrema_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Discotrema_dentary_teeth.jpg","item9":"やや大きい円錐歯","item10":"棒～棍棒状　歯がない"},
+  {"name":"ウミシダウバウオ属","img": "images/Discotrema.png","imgDisc": "images/Discotrema_disc.jpg","item1":"単型　中央部に大きな空隙がある　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Discotrema_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Discotrema_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Discotrema_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Discotrema_dentary_teeth.jpg","item9":"やや大きい円錐歯","imgGill_arch": "images/Discotrema_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は棒～棍棒状で歯がない　鰓耙の並びは1列"},
 
   
-  {"name":"タスジウミシダウバウオ属","img": "images/Rhinolepadichthys.png","imgDisc": "images/Rhinolepadichthys_disc.jpg","item1":"単型　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Rhinolepadichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Rhinolepadichthys_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Rhinolepadichthys_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Rhinolepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる、やや大きな円錐歯","item10":"被針状　歯がない"},
+  {"name":"タスジウミシダウバウオ属","img": "images/Rhinolepadichthys.png","imgDisc": "images/Rhinolepadichthys_disc.jpg","item1":"単型　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Rhinolepadichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Rhinolepadichthys_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Rhinolepadichthys_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Rhinolepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる、やや大きな円錐歯","imgGill_arch": "images/Rhinolepadichthys_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で歯がない"},
 
   
-  {"name":"ハシナガウバウオ属","img": "images/Diademichthys.png","imgDisc": "images/Diademichthys_disc.jpg","item1":"単型　吸盤サイズがひじょうに小さい","item2":"中央で連続する","imgLip": "images/Diademichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Diademichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Diademichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Diademichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ハシナガウバウオ属","img": "images/Diademichthys.png","imgDisc": "images/Diademichthys_disc.jpg","item1":"単型　吸盤サイズが非常に小さい","item2":"中央で連続する","imgLip": "images/Diademichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Diademichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Diademichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Diademichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","imgGill_arch": "images/Diademichthys_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
 
   
-  {"name":"ミサキウバウオ属","img": "images/Lepadichthys.png","imgDisc": "images/Lepadichthys_disc.jpg","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Lepadichthys_premaxillae.jpg","item7":"非常に大きく、三角形に近い","imgPremaxillae_teeth": "images/Lepadichthys_premaxillae_teeth.jpg","item8":"楕円形+フック状の先端","imgDentary_teeth": "images/Lepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","item10":"棒～棍棒状　全体的に歯がある"},
+  {"name":"ミサキウバウオ属","img": "images/Lepadichthys.png","imgDisc": "images/Lepadichthys_disc.jpg","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Lepadichthys_premaxillae.jpg","item7":"非常に大きく、三角形に近い","imgPremaxillae_teeth": "images/Lepadichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Lepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Lepadichthys_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
   
 
-  {"name":"Flabellicauda","img": "images/Flabellicauda.png","imgDisc": "images/Flabellicauda_disc.jpg","item1":"単型　吸盤サイズがひじょうに小さい","item2":"中央部に突起がなく、左右で分かれる　または　中央で連続する","imgLip": "images/Flabellicauda_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Flabellicauda_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Flabellicauda_premaxillae_teeth.jpg","item8":"楕円形+フック状の先端","imgDentary_teeth": "images/Flabellicauda_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","item10":"棒～棍棒状　歯がない"}
+  {"name":"Flabellicauda","img": "images/Flabellicauda.png","imgDisc": "images/Flabellicauda_disc.jpg","item1":"単型　吸盤サイズが非常に小さい","item2":"中央部に突起がなく、左右で分かれる　または　中央で連続する","imgLip": "images/Flabellicauda_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Flabellicauda_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Flabellicauda_premaxillae_teeth.jpg","item8":"楕円形+フック状の先端","imgDentary_teeth": "images/Flabellicauda_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Flabellicauda_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で歯がない"}
 ];
 
 const compareItems = [
@@ -139,7 +139,7 @@ const compareItems = [
   {"label":"前上顎骨前方間の空隙","key":"item7"},
   {"label":"上顎歯","key":"item8"},
   {"label":"下顎歯","key":"item9"},
-  {"label":"第5角鰓骨（ceratobranchial 5）","key":"item10"}
+  {"label":"基舌骨と鰓弓部","key":"item10"}
 ];
 
 // ===== セレクト初期化（2色グループ） =====
@@ -284,6 +284,15 @@ function updateTable() {
         td.innerHTML = `
           <img src="${fish.imgDentary_teeth}" 
                alt="${fish.name} 下顎歯" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+
+　　　// ===== 鰓弓部（item10） =====
+      } else if (item.key === "item10" && fish.imgGill_arch) {
+        td.innerHTML = `
+          <img src="${fish.imgGill_arch}" 
+               alt="${fish.name} 鰓弓部" 
                style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
           <div>${fish[item.key]}</div>
         `;
