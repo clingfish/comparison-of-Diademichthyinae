@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ウバウオ科 Diademichthyinae 属間比較表</title>
+  <title>ウバウオ科 Diademichthyinae 比較表</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
   <style>
@@ -43,7 +43,7 @@
 </head>
 <body>
 
-<h1>ウバウオ科 Diademichthyinae 属間比較表</h1>
+<h1>ウバウオ科 Diademichthyinae 比較表</h1>
 
 <div style="text-align:center;">
   <label>属1:
@@ -66,7 +66,7 @@
 <table>
   <thead>
     <tr>
-      <th>形質／属</th>
+      <th>形質／属（イラストをタップで種間比較）</th>
       <th id="header1">属1</th>
       <th id="header2">属2</th>
       <th id="header3">属3</th>
@@ -78,7 +78,7 @@
 <script>
 // ===== 魚データ（Excel 2～18行目より） =====
 const fishList = [
-  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/mikisaizoku_A_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_A_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/mikisaizoku_A_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_A_dentary_teeth.jpg","item9":"四角形の門歯状歯+フック状の先端","imgGill_arch": "images/mikisaizoku_A_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
+  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgAlt": "images/mikisaizoku_A_alt.jpg","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/mikisaizoku_A_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_A_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/mikisaizoku_A_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_A_dentary_teeth.jpg","item9":"四角形の門歯状歯+フック状の先端","imgGill_arch": "images/mikisaizoku_A_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
   {"name":"未記載属 B","img": "images/mikisaizoku_B.png","imgDisc": "images/mikisaizoku_B_disc.jpg","item1":"複型　吸盤中央部の乳頭状突起が著しく少なく、その数は1～2","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_B_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_B_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_B_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/mikisaizoku_B_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
@@ -93,7 +93,7 @@ const fishList = [
   {"name":"ツルウバウオ属","img": "images/Aspasmichthys.png","imgDisc": "images/Aspasmichthys_disc.jpg","item1":"複型","item2":"左右で分かれる（突起がない部分はひじょうに幅狭いスリット状）","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasmichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Aspasmichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Aspasmichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","imgGill_arch": "images/Aspasmichthys_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
-  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Propherallodus_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Propherallodus_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Propherallodus_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Propherallodus_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Propherallodus_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
+  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgAlt": "images/Propherallodus_alt.jpg","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Propherallodus_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Propherallodus_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Propherallodus_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Propherallodus_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Propherallodus_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
 
   
   {"name":"ホソウバウオ属","img": "images/Pherallodus.png","imgDisc": "images/Pherallodus_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","imgPremaxillae": "images/Pherallodus_premaxillae.jpg","item7":"非常に幅狭い楕円形","imgPremaxillae_teeth": "images/Pherallodus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Pherallodus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/Pherallodus_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
@@ -204,21 +204,46 @@ function updateTable() {
       span.textContent = selected[i].name;
       h.appendChild(span);
 
-      // 画像を追加（文字の下に表示）
-      if (selected[i].img) {
-        const img = document.createElement("img");
-        img.src = selected[i].img;
-        img.alt = selected[i].name;
-        img.style.width = "200px";
-        img.style.height = "auto";
-        img.style.display = "block";
-        img.style.margin = "5px auto 0"; // 上に余白をつける
-        h.appendChild(img);
-      }
+      // 画像を追加（クリックで切り替え可能）
+if (selected[i].img) {
+  const img = document.createElement("img");
+  img.src = selected[i].img;
+  img.alt = selected[i].name;
+  img.style.width = "200px";
+  img.style.height = "auto";
+  img.style.display = "block";
+  img.style.margin = "5px auto 0";
+  img.style.cursor = "pointer";
+  img.style.transition = "opacity 0.3s";
+
+  // トグル状態を管理
+  let toggled = false;
+
+  // 1クリックで切替＋拡大
+  img.addEventListener("click", () => {
+    if (selected[i].imgAlt) {
+      // 画像切替
+      img.style.opacity = 0;
+      setTimeout(() => {
+        toggled = !toggled;
+        img.src = toggled ? selected[i].imgAlt : selected[i].img;
+        img.style.opacity = 1;
+
+        // 拡大表示
+        showModal(img.src);
+      }, 150);
     } else {
-      h.textContent = `属${i + 1}`;
+      // imgAltが無い場合は通常の拡大表示
+      showModal(img.src);
     }
   });
+
+  h.appendChild(img);
+}
+  } else {
+    h.textContent = `属${i + 1}`;
+  }
+}); //
 
    // ---- 本体テーブル更新 ----
   const tbody = document.getElementById("compare-body");
@@ -315,5 +340,412 @@ function updateTable() {
 initSelects();
 </script>
 
+<body>
+  <!-- あなたの表など他の要素 -->
+
+  <div id="imgModal" style="
+    display:none;
+    position:fixed;
+    top:0; left:0; width:100%; height:100%;
+    background-color:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+  ">
+    <img id="modalImg" src="" alt="拡大画像" style="max-width:90%; max-height:90%; border-radius:8px;">
+  </div>
+
+  <script>
+  // ===== 拡大画像を表示 =====
+  function showModal(src) {
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = src;
+    modal.style.display = 'flex';
+  }
+
+  // ===== モーダルを閉じる =====
+  document.getElementById('imgModal').addEventListener('click', () => {
+    document.getElementById('imgModal').style.display = 'none';
+  });
+
+  // 初期化呼び出し
+  initSelects();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ウバウオ科 Diademichthyinae 比較表</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #f7f7f7;
+      margin: 20px;
+    }
+    h1 { text-align: center; font-size: 20px; }
+    select { margin: 0 10px; padding: 5px; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      background: white;
+    }
+    th, td {
+      border: 1.5px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+    tbody tr:nth-child(even) { background-color: #fafafa; }
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 2;
+    }
+
+    /* グループ別に背景色を付ける */
+    optgroup[label^="吸盤が複型のグループ"] option {
+      background-color: #eef6ff;
+    }
+    optgroup[label^="吸盤が単型のグループ"] option {
+      background-color: #fff3e6;
+    }
+  </style>
+</head>
+<body>
+
+<h1>ウバウオ科 Diademichthyinae 比較表</h1>
+
+<div style="text-align:center;">
+  <label>属1:
+    <select id="fish1" onchange="updateTable()">
+      <option value="">選択してください</option>
+    </select>
+  </label>
+  <label>属2:
+    <select id="fish2" onchange="updateTable()">
+      <option value="">選択してください</option>
+    </select>
+  </label>
+  <label>属3:
+    <select id="fish3" onchange="updateTable()">
+      <option value="">選択してください</option>
+    </select>
+  </label>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>形質／属（イラストをタップで種間比較）</th>
+      <th id="header1">属1</th>
+      <th id="header2">属2</th>
+      <th id="header3">属3</th>
+    </tr>
+  </thead>
+  <tbody id="compare-body"></tbody>
+</table>
+
+<script>
+// ===== 魚データ（Excel 2～18行目より） =====
+const fishList = [
+  {"name":"未記載属 A","img": "images/mikisaizoku_A.png","imgAlt": "images/mikisaizoku_A_alt.jpg","imgDisc": "images/mikisaizoku_A_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/mikisaizoku_A_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_A_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/mikisaizoku_A_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_A_dentary_teeth.jpg","item9":"四角形の門歯状歯+フック状の先端","imgGill_arch": "images/mikisaizoku_A_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
+
+  
+  {"name":"未記載属 B","img": "images/mikisaizoku_B.png","imgDisc": "images/mikisaizoku_B_disc.jpg","item1":"複型　吸盤中央部の乳頭状突起が著しく少なく、その数は1～2","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_B_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_B_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/mikisaizoku_B_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/mikisaizoku_B_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+
+  
+  {"name":"未記載属 C","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/mikisaizoku_C_premaxillae.jpg","item7":"卵型に近い楕円形","item8":"-","item9":"-","imgGill_arch": "images/mikisaizoku_C_gill arch.jpg","item10":"基舌骨は長い"},
+
+  
+  {"name":"ウバウオ属","img": "images/Aspasma.png","imgDisc": "images/Aspasma_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Aspasma_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasma_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Aspasma_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Aspasma_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Aspasma_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
+
+  
+  {"name":"ツルウバウオ属","img": "images/Aspasmichthys.png","imgDisc": "images/Aspasmichthys_disc.jpg","item1":"複型","item2":"左右で分かれる（突起がない部分はひじょうに幅狭いスリット状）","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Aspasmichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Aspasmichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Aspasmichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","imgGill_arch": "images/Aspasmichthys_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で膨出部に歯がある"},
+
+  
+  {"name":"ヒメウバウオ属","img": "images/Propherallodus.png","imgAlt": "images/Propherallodus_alt.jpg","imgDisc": "images/Propherallodus_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","imgLowerLip": "images/Propherallodus_lowerlip.jpg","item4":"あり","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Propherallodus_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Propherallodus_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Propherallodus_dentary_teeth.jpg","item9":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgGill_arch": "images/Propherallodus_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある"},
+
+  
+  {"name":"ホソウバウオ属","img": "images/Pherallodus.png","imgDisc": "images/Pherallodus_disc.jpg","item1":"複型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"0または2","item6":"膜でつながらない","imgPremaxillae": "images/Pherallodus_premaxillae.jpg","item7":"非常に幅狭い楕円形","imgPremaxillae_teeth": "images/Pherallodus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Pherallodus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯+前方を向く門歯状歯","imgGill_arch": "images/Pherallodus_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+
+  
+  {"name":"メシマウバウオ属","img": "images/Liobranchia.png","imgDisc": "images/Liobranchia_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Liobranchia_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Liobranchia_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Liobranchia_dentary_teeth.jpg","item9":"先端が丸い門歯状歯","imgGill_arch": "images/Liobranchia_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は被針状で膨出部に歯がある　鰓耙は非常に小さい"},
+
+  
+  {"name":"Erdmannichthys","img": "images/Erdmannichthys.png","imgDisc": "images/Erdmannichthys_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"2","item6":"膜でつながらない","imgPremaxillae": "images/Erdmannichthys_premaxillae.jpg","item7":"非常に幅狭い楕円形","item8":"楕円形の門歯状歯+フック状の先端","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Erdmannichthys_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）"},
+
+  
+  {"name":"Flexor","img": "images/Flexor.png","imgDisc": "images/Flexor_disc.jpg","item1":"複型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながらない","imgPremaxillae": "images/Flexor_premaxillae.jpg","item7":"非常に幅狭い楕円形～卵型に近い楕円形","imgPremaxillae_teeth": "images/Flexor_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端　後方部の歯は著しく大きい","imgDentary_teeth": "images/Flexor_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Flexor_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+
+  
+  {"name":"未記載属 D","img": "images/mikisaizoku_D.png","imgDisc": "images/mikisaizoku_D_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/mikisaizoku_D_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/mikisaizoku_D_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/mikisaizoku_D_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端　歯は歯骨の前方部のみに限られる","imgGill_arch": "images/mikisaizoku_D_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+
+  
+  {"name":"アマツミウバウオ属","img": "images/Lepadicyathus.png","imgDisc": "images/Lepadicyathus_disc.jpg","item1":"単型","item2":"中央部に突起がなく、左右で分かれる","imgLip": "images/Lepadicyathus_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Lepadicyathus_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Lepadicyathus_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Lepadicyathus_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯　歯は歯骨の前方部のみに限られる","imgGill_arch": "images/Lepadicyathus_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は棒～棍棒状で全体的に歯がある　基鰓骨がない"},
+
+  
+  {"name":"ウミシダウバウオ属","img": "images/Discotrema.png","imgDisc": "images/Discotrema_disc.jpg","item1":"単型　中央部に大きな空隙がある　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Discotrema_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Discotrema_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Discotrema_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Discotrema_dentary_teeth.jpg","item9":"やや大きい円錐歯","imgGill_arch": "images/Discotrema_gill arch.jpg","item10":"基舌骨は比較的短い（第1～4角鰓骨よりも短い）　第5角鰓骨は棒～棍棒状で歯がない　鰓耙の並びは1列"},
+
+  
+  {"name":"タスジウミシダウバウオ属","img": "images/Rhinolepadichthys.png","imgDisc": "images/Rhinolepadichthys_disc.jpg","item1":"単型　突起の先端が硬質化する","item2":"中央で連続する","imgLip": "images/Rhinolepadichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Rhinolepadichthys_premaxillae.jpg","item7":"ほとんどない","imgPremaxillae_teeth": "images/Rhinolepadichthys_premaxillae_teeth.jpg","item8":"長方形の門歯状歯+フック状（やや不明瞭）の先端","imgDentary_teeth": "images/Rhinolepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる、やや大きな円錐歯","imgGill_arch": "images/Rhinolepadichthys_gill arch.jpg","item10":"基舌骨は中庸の長さ　第5角鰓骨は被針状で歯がない"},
+
+  
+  {"name":"ハシナガウバウオ属","img": "images/Diademichthys.png","imgDisc": "images/Diademichthys_disc.jpg","item1":"単型　吸盤サイズが非常に小さい","item2":"中央で連続する","imgLip": "images/Diademichthys_oral_features.jpg","item3":"吻部の皮膚と癒合する","item4":"なし","item5":"2","item6":"膜でつながる","imgPremaxillae": "images/Diademichthys_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Diademichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Diademichthys_dentary_teeth.jpg","item9":"四角形～楕円形の門歯状歯+フック状の先端","imgGill_arch": "images/Diademichthys_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+
+  
+  {"name":"ミサキウバウオ属","img": "images/Lepadichthys.png","imgDisc": "images/Lepadichthys_disc.jpg","item1":"単型","item2":"中央で連続する","item3":"吻部の皮膚と癒合・埋没しない","item4":"なし","item5":"3","item6":"膜でつながる","imgPremaxillae": "images/Lepadichthys_premaxillae.jpg","item7":"非常に大きく、三角形に近い","imgPremaxillae_teeth": "images/Lepadichthys_premaxillae_teeth.jpg","item8":"楕円形の門歯状歯+フック状の先端","imgDentary_teeth": "images/Lepadichthys_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Lepadichthys_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で全体的に歯がある"},
+  
+
+  {"name":"Flabellicauda","img": "images/Flabellicauda.png","imgDisc": "images/Flabellicauda_disc.jpg","item1":"単型　吸盤サイズが非常に小さい","item2":"中央部に突起がなく、左右で分かれる　または　中央で連続する","imgLip": "images/Flabellicauda_oral_features.jpg","item3":"吻部の皮膚に後方部が埋没する","item4":"なし","item5":"0","item6":"膜でつながる","imgPremaxillae": "images/Flabellicauda_premaxillae.jpg","item7":"卵型に近い楕円形","imgPremaxillae_teeth": "images/Flabellicauda_premaxillae_teeth.jpg","item8":"楕円形+フック状の先端","imgDentary_teeth": "images/Flabellicauda_dentary_teeth.jpg","item9":"先端が後方に曲がる円錐歯","imgGill_arch": "images/Flabellicauda_gill arch.jpg","item10":"基舌骨は長い　第5角鰓骨は棒～棍棒状で歯がない"}
+];
+
+const compareItems = [
+  {"label":"吸盤タイプ","key":"item1"},
+  {"label":"吸盤前縁部の乳頭状突起","key":"item2"},
+  {"label":"上唇","key":"item3"},
+  {"label":"下唇前方部の葉状突出部","key":"item4"},
+  {"label":"前鰓蓋感覚孔数","key":"item5"},
+  {"label":"鰓膜と峡部","key":"item6"},
+  {"label":"前上顎骨前方間の空隙","key":"item7"},
+  {"label":"上顎歯","key":"item8"},
+  {"label":"下顎歯","key":"item9"},
+  {"label":"基舌骨と鰓弓部","key":"item10"}
+];
+
+// ===== セレクト初期化（2色グループ） =====
+function initSelects() {
+  const selects = [fish1, fish2, fish3];
+
+  const group1Names = [
+    "未記載属 A","未記載属 B","未記載属 C","ウバウオ属","ツルウバウオ属",
+    "ヒメウバウオ属","ホソウバウオ属","メシマウバウオ属","Erdmannichthys","Flexor"
+  ];
+  const group2Names = [
+    "未記載属 D","アマツミウバウオ属","ウミシダウバウオ属","タスジウミシダウバウオ属",
+    "ハシナガウバウオ属","ミサキウバウオ属","Flabellicauda"
+  ];
+
+  selects.forEach(select => {
+    select.innerHTML = '<option value="">選択してください</option>';
+
+    const group1 = document.createElement("optgroup");
+    group1.label = "吸盤が複型のグループ";
+
+    group1Names.forEach(name => {
+      const fish = fishList.find(f => f.name === name);
+      if (fish) {
+        const opt = document.createElement("option");
+        opt.value = fish.name;
+        opt.textContent = fish.name;
+        group1.appendChild(opt);
+      }
+    });
+
+    const group2 = document.createElement("optgroup");
+    group2.label = "吸盤が単型のグループ";
+
+    group2Names.forEach(name => {
+      const fish = fishList.find(f => f.name === name);
+      if (fish) {
+        const opt = document.createElement("option");
+        opt.value = fish.name;
+        opt.textContent = fish.name;
+        group2.appendChild(opt);
+      }
+    });
+
+    select.appendChild(group1);
+    select.appendChild(group2);
+  });
+}
+
+// ===== 表更新 =====
+function updateTable() {
+  const selected = [fish1.value, fish2.value, fish3.value].map(
+    name => fishList.find(f => f.name === name)
+  );
+  const headers = [header1, header2, header3];
+
+  headers.forEach((h, i) => {
+    h.innerHTML = ""; // クリア
+    if (selected[i]) {
+      // 属名を先に追加（上に表示）
+      const span = document.createElement("span");
+      span.textContent = selected[i].name;
+      h.appendChild(span);
+
+      // 画像を追加（クリックで切り替え可能）
+if (selected[i].img) {
+  const img = document.createElement("img");
+  img.src = selected[i].img;
+  img.alt = selected[i].name;
+  img.style.width = "200px";
+  img.style.height = "auto";
+  img.style.display = "block";
+  img.style.margin = "5px auto 0";
+  img.style.cursor = "pointer";
+  img.style.transition = "opacity 0.3s";
+
+  // トグル状態を管理
+  let toggled = false;
+
+  // 1クリックで切替＋拡大
+  img.addEventListener("click", () => {
+    if (selected[i].imgAlt) {
+      // 画像切替
+      img.style.opacity = 0;
+      setTimeout(() => {
+        toggled = !toggled;
+        img.src = toggled ? selected[i].imgAlt : selected[i].img;
+        img.style.opacity = 1;
+
+        // 拡大表示
+        showModal(img.src);
+      }, 150);
+    } else {
+      // imgAltが無い場合は通常の拡大表示
+      showModal(img.src);
+    }
+  });
+
+  h.appendChild(img);
+}
+  } else {
+    h.textContent = `属${i + 1}`;
+  }
+}); //
+
+   // ---- 本体テーブル更新 ----
+  const tbody = document.getElementById("compare-body");
+  tbody.innerHTML = "";
+
+  compareItems.forEach(item => {
+  const tr = document.createElement("tr");
+  const th = document.createElement("td");
+  th.textContent = item.label;
+  tr.appendChild(th);
+
+  selected.forEach(fish => {
+    const td = document.createElement("td");
+
+    if (fish) {
+      // ===== 吸盤タイプ（item1） =====
+      if (item.key === "item1" && fish.imgDisc) {
+        td.innerHTML = `
+          <img src="${fish.imgDisc}" 
+               alt="${fish.name} 吸盤" 
+               style="width:200px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+      
+      // ===== 上唇（item3） =====
+      } else if (item.key === "item3" && fish.imgLip) {
+        td.innerHTML = `
+          <img src="${fish.imgLip}" 
+               alt="${fish.name} 上唇" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+   
+　　　// ===== 下唇前方部の葉状突出部（item4） =====
+      } else if (item.key === "item4" && fish.imgLowerLip) {
+        td.innerHTML = `
+          <img src="${fish.imgLowerLip}" 
+               alt="${fish.name} 下唇" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+   
+　　　// ===== 前上顎骨前方間の空隙（item7） =====
+      } else if (item.key === "item7" && fish.imgPremaxillae) {
+        td.innerHTML = `
+          <img src="${fish.imgPremaxillae}" 
+               alt="${fish.name} 前上顎骨前方間の空隙" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+
+　　　// ===== 上顎歯（item8） =====
+      } else if (item.key === "item8" && fish.imgPremaxillae_teeth) {
+        td.innerHTML = `
+          <img src="${fish.imgPremaxillae_teeth}" 
+               alt="${fish.name} 上顎歯" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+
+　　　// ===== 下顎歯（item9） =====
+      } else if (item.key === "item9" && fish.imgDentary_teeth) {
+        td.innerHTML = `
+          <img src="${fish.imgDentary_teeth}" 
+               alt="${fish.name} 下顎歯" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+
+　　　// ===== 鰓弓部（item10） =====
+      } else if (item.key === "item10" && fish.imgGill_arch) {
+        td.innerHTML = `
+          <img src="${fish.imgGill_arch}" 
+               alt="${fish.name} 鰓弓部" 
+               style="width:300px; height:auto; display:block; margin:0 auto 5px; border-radius:6px;">
+          <div>${fish[item.key]}</div>
+        `;
+
+      // ===== 通常テキスト行 =====
+      } else {
+        td.textContent = fish[item.key] || "-";
+      }
+    } else {
+      td.textContent = "-";
+    }
+
+    tr.appendChild(td);
+  });
+
+  tbody.appendChild(tr);
+});
+}
+
+initSelects();
+</script>
+
+<body>
+  <!-- あなたの表など他の要素 -->
+
+  <div id="imgModal" style="
+    display:none;
+    position:fixed;
+    top:0; left:0; width:100%; height:100%;
+    background-color:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+  ">
+    <img id="modalImg" src="" alt="拡大画像" style="max-width:90%; max-height:90%; border-radius:8px;">
+  </div>
+
+  <script>
+  // ===== 拡大画像を表示 =====
+  function showModal(src) {
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = src;
+    modal.style.display = 'flex';
+  }
+
+  // ===== モーダルを閉じる =====
+  document.getElementById('imgModal').addEventListener('click', () => {
+    document.getElementById('imgModal').style.display = 'none';
+  });
+
+  // 初期化呼び出し
+  initSelects();
+  </script>
 </body>
 </html>
